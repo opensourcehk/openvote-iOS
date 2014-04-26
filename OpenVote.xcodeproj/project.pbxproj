@@ -7,21 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FF1329D47574B90AAB32D5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA82588C7A4D451784C66E57 /* libPods.a */; };
 		CB1BE889190BA32000221FC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE888190BA32000221FC3 /* Foundation.framework */; };
 		CB1BE88B190BA32000221FC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE88A190BA32000221FC3 /* CoreGraphics.framework */; };
 		CB1BE88D190BA32000221FC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE88C190BA32000221FC3 /* UIKit.framework */; };
 		CB1BE893190BA32000221FC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE891190BA32000221FC3 /* InfoPlist.strings */; };
 		CB1BE895190BA32000221FC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE894190BA32000221FC3 /* main.m */; };
 		CB1BE899190BA32000221FC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE898190BA32000221FC3 /* AppDelegate.m */; };
-		CB1BE89C190BA32000221FC3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE89A190BA32000221FC3 /* Main_iPhone.storyboard */; };
-		CB1BE89F190BA32000221FC3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE89D190BA32000221FC3 /* Main_iPad.storyboard */; };
-		CB1BE8A2190BA32000221FC3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE8A1190BA32000221FC3 /* ViewController.m */; };
 		CB1BE8A4190BA32000221FC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE8A3190BA32000221FC3 /* Images.xcassets */; };
 		CB1BE8AB190BA32100221FC3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE8AA190BA32100221FC3 /* XCTest.framework */; };
 		CB1BE8AC190BA32100221FC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE888190BA32000221FC3 /* Foundation.framework */; };
 		CB1BE8AD190BA32100221FC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1BE88C190BA32000221FC3 /* UIKit.framework */; };
 		CB1BE8B5190BA32100221FC3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE8B3190BA32100221FC3 /* InfoPlist.strings */; };
 		CB1BE8B7190BA32100221FC3 /* OpenVoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE8B6190BA32100221FC3 /* OpenVoteTests.m */; };
+		CB1BE8C3190BAC4B00221FC3 /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE8C1190BAC4B00221FC3 /* VoteViewController.m */; };
+		CB1BE8C4190BAC4B00221FC3 /* VoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE8C2190BAC4B00221FC3 /* VoteViewController.xib */; };
+		CB9EA643190BB96F0038E012 /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA641190BB96F0038E012 /* images-1.jpeg */; };
+		CB9EA644190BB96F0038E012 /* images_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA642190BB96F0038E012 /* images_2.jpg */; };
+		CB9EA64A190BDE600038E012 /* candidate.json in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA646190BDE600038E012 /* candidate.json */; };
+		CB9EA64B190BDE600038E012 /* captain_america.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA648190BDE600038E012 /* captain_america.jpg */; };
+		CB9EA64C190BDE600038E012 /* winter_soilder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA649190BDE600038E012 /* winter_soilder.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +50,22 @@
 		CB1BE896190BA32000221FC3 /* OpenVote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenVote-Prefix.pch"; sourceTree = "<group>"; };
 		CB1BE897190BA32000221FC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CB1BE898190BA32000221FC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CB1BE89B190BA32000221FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		CB1BE89E190BA32000221FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		CB1BE8A0190BA32000221FC3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CB1BE8A1190BA32000221FC3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB1BE8A3190BA32000221FC3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CB1BE8A9190BA32100221FC3 /* OpenVoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenVoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1BE8AA190BA32100221FC3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CB1BE8B2190BA32100221FC3 /* OpenVoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenVoteTests-Info.plist"; sourceTree = "<group>"; };
 		CB1BE8B4190BA32100221FC3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB1BE8B6190BA32100221FC3 /* OpenVoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenVoteTests.m; sourceTree = "<group>"; };
+		CB1BE8C0190BAC4B00221FC3 /* VoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewController.h; sourceTree = "<group>"; };
+		CB1BE8C1190BAC4B00221FC3 /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
+		CB1BE8C2190BAC4B00221FC3 /* VoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteViewController.xib; sourceTree = "<group>"; };
+		CB9EA641190BB96F0038E012 /* images-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-1.jpeg"; sourceTree = "<group>"; };
+		CB9EA642190BB96F0038E012 /* images_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images_2.jpg; sourceTree = "<group>"; };
+		CB9EA646190BDE600038E012 /* candidate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = candidate.json; sourceTree = "<group>"; };
+		CB9EA648190BDE600038E012 /* captain_america.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = captain_america.jpg; sourceTree = "<group>"; };
+		CB9EA649190BDE600038E012 /* winter_soilder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winter_soilder.jpg; sourceTree = "<group>"; };
+		EA82588C7A4D451784C66E57 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D557969DA347708B50C67D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = ../Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,7 @@
 				CB1BE88B190BA32000221FC3 /* CoreGraphics.framework in Frameworks */,
 				CB1BE88D190BA32000221FC3 /* UIKit.framework in Frameworks */,
 				CB1BE889190BA32000221FC3 /* Foundation.framework in Frameworks */,
+				9FF1329D47574B90AAB32D5F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +100,7 @@
 				CB1BE8B0190BA32100221FC3 /* OpenVoteTests */,
 				CB1BE887190BA32000221FC3 /* Frameworks */,
 				CB1BE886190BA32000221FC3 /* Products */,
+				F8D557969DA347708B50C67D /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +120,7 @@
 				CB1BE88A190BA32000221FC3 /* CoreGraphics.framework */,
 				CB1BE88C190BA32000221FC3 /* UIKit.framework */,
 				CB1BE8AA190BA32100221FC3 /* XCTest.framework */,
+				EA82588C7A4D451784C66E57 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,11 +130,12 @@
 			children = (
 				CB1BE897190BA32000221FC3 /* AppDelegate.h */,
 				CB1BE898190BA32000221FC3 /* AppDelegate.m */,
-				CB1BE89A190BA32000221FC3 /* Main_iPhone.storyboard */,
-				CB1BE89D190BA32000221FC3 /* Main_iPad.storyboard */,
-				CB1BE8A0190BA32000221FC3 /* ViewController.h */,
-				CB1BE8A1190BA32000221FC3 /* ViewController.m */,
+				CB1BE8C0190BAC4B00221FC3 /* VoteViewController.h */,
+				CB1BE8C1190BAC4B00221FC3 /* VoteViewController.m */,
+				CB1BE8C2190BAC4B00221FC3 /* VoteViewController.xib */,
 				CB1BE8A3190BA32000221FC3 /* Images.xcassets */,
+				CB9EA640190BB96F0038E012 /* Resource */,
+				CB9EA645190BDE600038E012 /* JsonDummy */,
 				CB1BE88F190BA32000221FC3 /* Supporting Files */,
 			);
 			path = OpenVote;
@@ -155,6 +170,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CB9EA640190BB96F0038E012 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CB9EA641190BB96F0038E012 /* images-1.jpeg */,
+				CB9EA642190BB96F0038E012 /* images_2.jpg */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		CB9EA645190BDE600038E012 /* JsonDummy */ = {
+			isa = PBXGroup;
+			children = (
+				CB9EA646190BDE600038E012 /* candidate.json */,
+				CB9EA647190BDE600038E012 /* content */,
+			);
+			name = JsonDummy;
+			path = "../../Json Dummy";
+			sourceTree = "<group>";
+		};
+		CB9EA647190BDE600038E012 /* content */ = {
+			isa = PBXGroup;
+			children = (
+				CB9EA648190BDE600038E012 /* captain_america.jpg */,
+				CB9EA649190BDE600038E012 /* winter_soilder.jpg */,
+			);
+			path = content;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1BE8BA190BA32100221FC3 /* Build configuration list for PBXNativeTarget "OpenVote" */;
 			buildPhases = (
+				2F3107AF4D774AC9AD43B5EB /* Check Pods Manifest.lock */,
 				CB1BE881190BA32000221FC3 /* Sources */,
 				CB1BE882190BA32000221FC3 /* Frameworks */,
 				CB1BE883190BA32000221FC3 /* Resources */,
+				5F3E87830D2E4FE982C7FE4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,9 +276,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1BE89F190BA32000221FC3 /* Main_iPad.storyboard in Resources */,
 				CB1BE8A4190BA32000221FC3 /* Images.xcassets in Resources */,
-				CB1BE89C190BA32000221FC3 /* Main_iPhone.storyboard in Resources */,
+				CB9EA64A190BDE600038E012 /* candidate.json in Resources */,
+				CB9EA643190BB96F0038E012 /* images-1.jpeg in Resources */,
+				CB9EA64C190BDE600038E012 /* winter_soilder.jpg in Resources */,
+				CB9EA644190BB96F0038E012 /* images_2.jpg in Resources */,
+				CB1BE8C4190BAC4B00221FC3 /* VoteViewController.xib in Resources */,
+				CB9EA64B190BDE600038E012 /* captain_america.jpg in Resources */,
 				CB1BE893190BA32000221FC3 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,12 +297,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F3107AF4D774AC9AD43B5EB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3E87830D2E4FE982C7FE4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB1BE881190BA32000221FC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1BE8A2190BA32000221FC3 /* ViewController.m in Sources */,
+				CB1BE8C3190BAC4B00221FC3 /* VoteViewController.m in Sources */,
 				CB1BE899190BA32000221FC3 /* AppDelegate.m in Sources */,
 				CB1BE895190BA32000221FC3 /* main.m in Sources */,
 			);
@@ -284,22 +366,6 @@
 				CB1BE892190BA32000221FC3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CB1BE89A190BA32000221FC3 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB1BE89B190BA32000221FC3 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		CB1BE89D190BA32000221FC3 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB1BE89E190BA32000221FC3 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		CB1BE8B3190BA32100221FC3 /* InfoPlist.strings */ = {
@@ -387,9 +453,11 @@
 		};
 		CB1BE8BB190BA32100221FC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D557969DA347708B50C67D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenVote/OpenVote-Prefix.pch";
 				INFOPLIST_FILE = "OpenVote/OpenVote-Info.plist";
@@ -400,9 +468,11 @@
 		};
 		CB1BE8BC190BA32100221FC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D557969DA347708B50C67D /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OpenVote/OpenVote-Prefix.pch";
 				INFOPLIST_FILE = "OpenVote/OpenVote-Info.plist";
@@ -470,6 +540,7 @@
 				CB1BE8BC190BA32100221FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB1BE8BD190BA32100221FC3 /* Build configuration list for PBXNativeTarget "OpenVoteTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +549,7 @@
 				CB1BE8BF190BA32100221FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
