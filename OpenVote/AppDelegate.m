@@ -7,12 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "VoteViewController.h"
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions: (NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     // Override point for customization after application launch.
+    VoteViewController *voteViewController = [[VoteViewController alloc] initWithNibName:@"VoteViewController" bundle:nil];
+    
+    UINavigationController *nav = [[UINavigationController alloc]  initWithRootViewController:voteViewController];
+
+    
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
