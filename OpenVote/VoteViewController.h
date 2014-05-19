@@ -20,6 +20,11 @@
     UIActivityIndicatorView* _indicator;
     
     NSArray* _candidates;
+    
+    UIImageView *_imgView1;
+    UIImageView *_imgView2;
+    
+    UIBarButtonItem* _lblVoteTitle;
 }
 
 @property (nonatomic, retain) NSString* hkid;
@@ -30,7 +35,20 @@
 
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView* indicator;
 
+@property (nonatomic, retain) IBOutlet UIImageView* imgView1;
+@property (nonatomic, retain) IBOutlet UIImageView* imgView2;
+
+@property (nonatomic, retain) IBOutlet UILabel* lblName1;
+
+@property (nonatomic, retain) IBOutlet UILabel* lblName2;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem* lblVoteTitle;
+
 - (IBAction) voteButtonClicked:(id)sender;
+
+- (void) loadCandidate;
+
+- (void) loadImage:(NSString*) url withImageView:(id) imageView;
 
 - (CocoaSecurityResult*) hashContent:(NSString*) plaintext;
 

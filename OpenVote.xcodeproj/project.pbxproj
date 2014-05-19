@@ -22,8 +22,6 @@
 		CB1BE8B7190BA32100221FC3 /* OpenVoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE8B6190BA32100221FC3 /* OpenVoteTests.m */; };
 		CB1BE8C3190BAC4B00221FC3 /* VoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1BE8C1190BAC4B00221FC3 /* VoteViewController.m */; };
 		CB1BE8C4190BAC4B00221FC3 /* VoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB1BE8C2190BAC4B00221FC3 /* VoteViewController.xib */; };
-		CB9EA643190BB96F0038E012 /* images-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA641190BB96F0038E012 /* images-1.jpeg */; };
-		CB9EA644190BB96F0038E012 /* images_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA642190BB96F0038E012 /* images_2.jpg */; };
 		CB9EA64A190BDE600038E012 /* candidate.json in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA646190BDE600038E012 /* candidate.json */; };
 		CB9EA64B190BDE600038E012 /* captain_america.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA648190BDE600038E012 /* captain_america.jpg */; };
 		CB9EA64C190BDE600038E012 /* winter_soilder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CB9EA649190BDE600038E012 /* winter_soilder.jpg */; };
@@ -59,8 +57,6 @@
 		CB1BE8C0190BAC4B00221FC3 /* VoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteViewController.h; sourceTree = "<group>"; };
 		CB1BE8C1190BAC4B00221FC3 /* VoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteViewController.m; sourceTree = "<group>"; };
 		CB1BE8C2190BAC4B00221FC3 /* VoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoteViewController.xib; sourceTree = "<group>"; };
-		CB9EA641190BB96F0038E012 /* images-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-1.jpeg"; sourceTree = "<group>"; };
-		CB9EA642190BB96F0038E012 /* images_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images_2.jpg; sourceTree = "<group>"; };
 		CB9EA646190BDE600038E012 /* candidate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = candidate.json; sourceTree = "<group>"; };
 		CB9EA648190BDE600038E012 /* captain_america.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = captain_america.jpg; sourceTree = "<group>"; };
 		CB9EA649190BDE600038E012 /* winter_soilder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = winter_soilder.jpg; sourceTree = "<group>"; };
@@ -173,8 +169,6 @@
 		CB9EA640190BB96F0038E012 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				CB9EA641190BB96F0038E012 /* images-1.jpeg */,
-				CB9EA642190BB96F0038E012 /* images_2.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -278,9 +272,7 @@
 			files = (
 				CB1BE8A4190BA32000221FC3 /* Images.xcassets in Resources */,
 				CB9EA64A190BDE600038E012 /* candidate.json in Resources */,
-				CB9EA643190BB96F0038E012 /* images-1.jpeg in Resources */,
 				CB9EA64C190BDE600038E012 /* winter_soilder.jpg in Resources */,
-				CB9EA644190BB96F0038E012 /* images_2.jpg in Resources */,
 				CB1BE8C4190BAC4B00221FC3 /* VoteViewController.xib in Resources */,
 				CB9EA64B190BDE600038E012 /* captain_america.jpg in Resources */,
 				CB1BE893190BA32000221FC3 /* InfoPlist.strings in Resources */,

@@ -9,10 +9,14 @@
 #import "VoteViewController.h"
 
 #import "AFHTTPRequestOperationManager.h"
-#import "JSONKit.h"
+#import "AFImageDownloader.h"
 
 #define K_VOTE_CHOICE_1_TAG 1
 #define K_VOTE_CHOICE_2_TAG 2
+
+#define K_VOTE_URL @"" // TODO: Add your remote candidate server
+
+#define K_REMOTE_CANDIDATE @"/candidate.php"
 
 @interface VoteViewController()
 
@@ -20,6 +24,14 @@
 @end
 
 @implementation VoteViewController
+
+@synthesize imgView1 = _imgView1;
+
+@synthesize imgView2 = _imgView2;
+
+@synthesize lblName1;
+
+@synthesize lblName2;
 
 @synthesize tfHkid;
 
@@ -46,13 +58,8 @@
     
     [_indicator startAnimating];
     
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"candidate" ofType:@"json"];
+    [self loadCandidate];
     
-    NSError *jsonError;
-    
-    NSString* candidate = [NSString stringWithContentsOfFile:filePath encoding:NSStringEncodingConversionAllowLossy error:&jsonError];
-    
-    NSLog(@"Candidate:%@", candidate);
     
 //    JSONDecoder *jd = [JSONDecoder decoder];
 //    
@@ -82,7 +89,6 @@
 //    }
 
     
-    [_indicator stopAnimating];
     
     
 }
@@ -102,7 +108,7 @@
 {
     UIButton* btn = (UIButton*) sender;
     
-    int tag = btn.tag;
+    long tag = btn.tag;
         
     switch (tag) {
         case K_VOTE_CHOICE_1_TAG:
@@ -129,10 +135,30 @@
 
 - (IBAction) voteButtonClicked:(id)sender
 {
+    
+    
     CocoaSecurityResult *encrypted = [self hashContent:_hkid];
     
     /* POST MESSAGE */
     NSDictionary *parameters = @{@"vote": [NSString stringWithFormat:@"%d", _voteChoice], @"hkid": encrypted.hexLower};
+
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    [manager GET:[NSString stringWithFormat:@"%@", K_VOTE_URL ]
+      parameters:parameters
+            success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             
+                NSLog(@"%@", responseObject);
+                
+                 [self.indicator stopAnimating];
+                
+     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         
+         NSLog(@"Error: %@", error);
+         
+         [self.indicator stopAnimating];
+     }];
 
     
 }
@@ -175,4 +201,90 @@
     return true;
 }
 
+
+#pragma mark
+
+- (void) loadCandidate
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    NSDictionary *parameters = @{};
+    [manager GET:[NSString stringWithFormat:@"%@%@", K_VOTE_URL, K_REMOTE_CANDIDATE]
+      parameters:parameters
+          success:^(AFHTTPRequestOperation *operation, id responseObject) {
+              
+              [self.indicator stopAnimating];
+              
+              NSLog(@"Success: %@", responseObject);
+              
+              NSString* voteTitle = [responseObject objectForKey:@"vote_title"];
+              
+              self.lblVoteTitle.title = voteTitle;
+              
+              NSArray* candidates = [responseObject objectForKey:@"candidate"];
+              
+              for (int i = 0; i < [candidates count]; i++){
+              
+                  NSDictionary *candidate = [candidates objectAtIndex:i];
+                  
+                  NSString* avatar = [candidate objectForKey:@"avatar"];
+                  
+                  NSNumber* cid = [candidate objectForKey:@"id"];
+                  
+                  NSString* name = [candidate objectForKey:@"name"];
+
+                  NSString* imageUrl = [NSString stringWithFormat:@"%@/%@", K_VOTE_URL, avatar];
+                  
+                  
+                  UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(30, i*200+180, 260, 300)];
+                  
+                  [self.svCandidates addSubview:imageView];
+                  
+                  [imageView setTag:100+i];
+                  
+                  UIButton* btnCandiate = [[UIButton alloc] initWithFrame:imageView.frame];
+                  
+                  [self.svCandidates addSubview:btnCandiate];
+                  
+                  [self loadImage:imageUrl withImageView:imageView];
+                  
+                  UILabel* lblName = [[UILabel alloc] initWithFrame:CGRectMake(30, i*180+180, 260, 50)];
+                  
+                  lblName.text = name;
+                  
+                  lblName.textColor = [UIColor yellowColor];
+                  
+                  
+                  
+                  [self.svCandidates addSubview:lblName];
+                  
+                  [self.svCandidates setContentSize:CGSizeMake(self.svCandidates.contentSize.width, self.svCandidates.contentSize.height + 500)];
+                  
+              }
+              
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              
+              NSLog(@"Error: %@", error);
+              
+              [self.indicator stopAnimating];
+          }];
+}
+
+- (void) loadImage:(NSString*) url withImageView:(id) aImageView
+{
+    
+//    NSLog(@"Image url:%@", url);
+    
+    [AFImageDownloader imageDownloaderWithURLString:url
+                                          autoStart:YES completion:^(UIImage *decompressedImage) {
+                                              
+                                              ((UIImageView*)aImageView).image = decompressedImage;
+                                              
+                                              [aImageView setContentMode:UIViewContentModeScaleAspectFit];
+    }];
+    
+    
+    NSLog(@"%0.2f, %0.2f", self.svCandidates.contentSize.width, self.svCandidates.contentSize.height);
+    
+   }
 @end
